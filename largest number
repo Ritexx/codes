@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+	
+class employee
+{
+	char emp_name[30];
+	int emp_no;
+	float basic, da, it, gs, ns;	
+	
+public:
+	void read(int count)
+	{
+		cout << "enter employee details" << endl;
+		cout << "employee no: ";
+		cin >> emp_no;
+		
+		cout << "employee name : ";
+		cin >> emp_name;
+		
+		cout << "basic salary : ";
+		cin >> basic;
+		
+		cout << "employee details saved" << endl;
+	}
+		
+	float salary(int)
+	{
+		da = basic * 0.52;
+		gs= basic + da;
+		it= gs *0.30;
+		ns=(basic+da)-it;
+		return ns;
+		
+	}	
+	
+	void display( int count)
+	{
+		cout << "employee" << count << "details"<<endl;
+		cout <<"employee number:"<< emp_no << endl;
+		cout << "employee name :" << emp_name << endl;
+		cout << "net salary : " << ns << endl;
+		
+	}
+};	
+	
+int main()
+{
+	 employee emp[100];
+	 int num,count;
+	 
+	 cout << "enter the number of employee:";
+	 cin >> num;
+	 
+	 for ( count =0; count<num; count++)
+	 {
+	 	emp[count].read(count+1);
+	 }
+	 
+	 for(count =0; count< num; count++)
+	 {
+	 	emp[count].salary(count+1);
+	 }
+	 
+	  
+	 for(count =0; count< num; count++)
+	 {
+	 	emp[count].display(count+1);
+	 }
+	 
+	 return 0;
+}	 
+	 			
+			
+	 
+		
