@@ -22,15 +22,17 @@ class date
 
         void display()
         {
-            cout<<"\nThe Entered Date is :: ";
-            cout<<dd<<"-"<<mm<<"-"<<yy<<"\n";
+            cout<<"\nThe Entered Date is : ";
+            cout<<dd<<"-"<<mm<<"-"<<yy<<"\n" << endl;
         }
 };
+
 int main ()
 {
-date obj,obj2(25,1,2003);
-obj.display ();
-obj2.display();
+date a;
+date b(25,5,3003);
+a.display ();
+b.display();
 
 return 0;
 }
