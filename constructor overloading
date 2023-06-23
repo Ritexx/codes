@@ -1,0 +1,39 @@
+// C++ program to illustrate
+// Constructor overloading
+#include <iostream>
+using namespace std;
+ 
+class construct
+{
+ 
+public:
+    string result;
+    int sum;
+     
+    // Constructor with no parameters
+    construct()
+    {
+        result = " No parameter ";
+    }
+     
+    // Constructor with parameters
+    construct(int a, int b)
+    {
+        sum = a * b;
+    }
+     
+    void display()
+    {
+        cout<<"result : " << result << sum << endl << endl;
+    }
+};
+ 
+int main()
+{
+    construct a;
+    construct b( 10, 20);
+     
+    a.display();
+    b.display();
+    return 0;
+}
