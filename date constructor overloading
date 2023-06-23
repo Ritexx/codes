@@ -10,14 +10,14 @@ class date
     public:
         date()
         {
-            dd=31;
-            mm=12;
-            yy=2016;
+            dd=01;
+            mm=02;
+            yy=2002;
         }
-        date(int dd, int mm, int yy){
-            this->dd = dd;
-            this->mm = mm;
-            this->yy = yy;
+        date(int date, int month, int year){
+            this->dd = date;
+            this->mm = month;
+            this->yy = year;
         }
 
         void display()
